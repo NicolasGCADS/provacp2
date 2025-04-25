@@ -1,8 +1,8 @@
-import { NavigationContainer } from "@react-navigation/native/lib/typescript/src/NavigationContainer";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import ProfileScreen from "../screen/ProfileScreen";
 import DetailsScreen from "../screen/DetailsScreen";
 import HomeScreen from "../screen/HomeScreen";
+import ProfileScreen from "../screen/ProfileScreen";
 import BottomTabsNavigator from "./BottomTabsNavigator";
 
 export type RootStackParamList = {
@@ -15,19 +15,19 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
-    return(
+    return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen 
+                <Stack.Screen
                     name="Root"
                     component={BottomTabsNavigator}
-                    options={{headerShown: false}}
-                    />
+                    options={{ headerShown: false }}
+                />
                 <Stack.Screen name="Home" component={HomeScreen} />
                 <Stack.Screen name="Detalhes" component={DetailsScreen} />
                 <Stack.Screen name="Perfil" component={ProfileScreen} />
             </Stack.Navigator>
-    
+
         </NavigationContainer>
     )
-    }
+}
