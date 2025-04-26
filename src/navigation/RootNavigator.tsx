@@ -27,7 +27,6 @@ export default function RootNavigator() {
                 <Stack.Screen name="Detalhes" component={DetailsScreen} />
                 <Stack.Screen name="Perfil" component={ProfileScreen} />
             </Stack.Navigator>
-
         </NavigationContainer>
     )
 }

@@ -1,7 +1,18 @@
-import { Text } from "react-native"
+import { StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
     return (
-        <Text>Home gamer</Text>
+        <View style={homeStyle.container}>
+            <Text>Aqui é a Home</Text>
+        </View>
     )
 }
+
+const homeStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
